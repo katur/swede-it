@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "swede-it",
+  "description": "Take a trip to Sweden!",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "sweden.ico",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "tabs",
+    "file:///Users/*",
+    "https://*/",
+    "http://*/"
+  ]
+}
