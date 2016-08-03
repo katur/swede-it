@@ -4,9 +4,9 @@ const BLUE = "#00559b";
 const YELLOW = "#fecc00";
 const BLACK = "fff";
 
-const BLUE_SELECTOR = "body, section, div, table, ul, ol, form";
+const BLUE_SELECTOR = "html, body, section, div, article, table, ul, ol, form";
 const YELLOW_SELECTOR = "p, blockquote, span, a, pre, " +
-                        "td, th, li, hr, button, input, " +
+                        "td, th, li, hr, button, input, select, " +
                         "h1, h2, h3, h4, header, footer";
 const FLAG_SELECTOR = YELLOW_SELECTOR;
 
