@@ -17,7 +17,7 @@ flags = $(FLAG_SELECTOR).filter(function() {
   w = el.width();
   return (w > 40 && h > 25 &&   // not too small
           w < 400 && h < 250 && // not too big
-          (w * 2) > h &&              // not too tall
+          (w * 2) > h &&        // not too tall
           w < (3 * h))          // not too wide
 });
 
