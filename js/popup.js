@@ -11,7 +11,7 @@ function swedeThePage() {
       allFrames: true,
     }, function() {
       chrome.tabs.executeScript({
-        file: "js/swede-it.js",
+        file: "js/swede-the-page.js",
         allFrames: true,
       });
     });
