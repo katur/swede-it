@@ -1,27 +1,51 @@
-const BLUE = "#006aa7"
-const YELLOW = "#fecc00"
-const BLUE_SELECTOR = "body, div, table, ul, form";
-const YELLOW_SELECTOR = "p, span, a, td, li, blockquote, pre, button, input, header, h1, h2, h3, h4";
+// Official colors listed here:
+// http://www.norden.org/en/fakta-om-norden-1/the-nordic-flags/the-swedish-flag
+const BLUE = "#00559b";
+const YELLOW = "#fecc00";
+const BLACK = "fff";
+
+const BLUE_SELECTOR = "body, section, div, table, ul, ol, form";
+
+const YELLOW_SELECTOR = "p, blockquote, span, a, pre, " +
+                        "td, th, li, " +
+                        "button, input, hr, " +
+                        "h1, h2, h3, h4, header, footer";
+
 const FLAG_SELECTOR = YELLOW_SELECTOR;
+const FLAG_URL = chrome.extension.getURL("/images/sweden.jpg");
 
 
-$(BLUE_SELECTOR).css("background", BLUE);
-$(BLUE_SELECTOR).css("color", "black");
-$(YELLOW_SELECTOR).css("background", YELLOW);
-$(YELLOW_SELECTOR).css("color", "black");
+$("body").css({
+  "color": BLACK,
+});
 
 
-flags = $(FLAG_SELECTOR).filter(function() {
+$(BLUE_SELECTOR).css({
+  "background": BLUE,
+  "border": BLUE,
+  "color": BLACK,
+});
+
+
+$(YELLOW_SELECTOR).css({
+  "background": YELLOW,
+  "border": YELLOW,
+  "color": BLACK,
+});
+
+
+$(FLAG_SELECTOR).filter(function() {
   el = $(this);
   h = el.height();
   w = el.width();
   return (w > 40 && h > 25 &&   // not too small
           w < 400 && h < 250 && // not too big
           (w * 2) > h &&        // not too tall
-          w < (3 * h))          // not too wide
+          w < (3 * h));         // not too wide
+}).css({
+  "background-image": 'url("' + FLAG_URL + '")',
+  "background-size": "100% 100%",
+  "background-repeat": "no-repeat",
+  "background-color": "rgba(0, 0, 0, 0.5)",
+  "border": "1px solid " + YELLOW,
 });
-
-flags.css("background-image", 'url("https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1600px-Flag_of_Sweden.svg.png")');
-flags.css("background-size", "100% 100%");
-flags.css("background-repeat", "no-repeat");
-flags.css("background-color", "rgba(0, 0, 0, 0.5)");

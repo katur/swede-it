@@ -2,12 +2,12 @@
   "manifest_version": 2,
 
   "name": "swede-it",
-  "description": "Take a trip to Sweden without leaving your browser!",
+  "description": "Make your favorite webpage a bit more Swedish",
   "version": "1.0",
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
   },
 
   "browser_action": {
@@ -19,5 +19,9 @@
     "file:///Users/*",
     "https://*/",
     "http://*/"
+  ],
+
+  "web_accessible_resources": [
+    "images/sweden.jpg"
   ]
 }

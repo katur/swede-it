@@ -5,7 +5,6 @@ $(document).ready(function() {
 
 function swedeThePage() {
   var button = $("#swede-it-button");
-
   button.on("click", function() {
     chrome.tabs.executeScript({
       file: "jquery.js",

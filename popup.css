@@ -1,4 +1,16 @@
-body {
-  background: #006aa7;
-  color: #fecc00;
+html, body {
+  background: #00559b;
+}
+
+button {
+  cursor: pointer;
+  margin: 20px;
+  padding: 6px 8px;
+  background: #fecc00;
+  border: 1px solid #fecc00;
+  border-radius: 5px;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  color: #00559b;
+  white-space: nowrap;
 }
