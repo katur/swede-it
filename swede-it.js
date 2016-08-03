@@ -1,10 +1,14 @@
+const BLUE = "#006aa7"
+const YELLOW = "#fecc00"
 const BLUE_SELECTOR = "body, div, table, ul, form";
 const YELLOW_SELECTOR = "p, span, a, td, li, blockquote, pre, button, input, header, h1, h2, h3, h4";
 const FLAG_SELECTOR = YELLOW_SELECTOR;
 
 
-$(BLUE_SELECTOR).css("background", "#006aa7");
-$(YELLOW_SELECTOR).css("background", "#fecc00");
+$(BLUE_SELECTOR).css("background", BLUE);
+$(BLUE_SELECTOR).css("color", "black");
+$(YELLOW_SELECTOR).css("background", YELLOW);
+$(YELLOW_SELECTOR).css("color", "black");
 
 
 flags = $(FLAG_SELECTOR).filter(function() {
