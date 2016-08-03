@@ -5,18 +5,12 @@ const YELLOW = "#fecc00";
 const BLACK = "fff";
 
 const BLUE_SELECTOR = "body, section, div, table, ul, ol, form";
-
 const YELLOW_SELECTOR = "p, blockquote, span, a, pre, " +
                         "td, th, li, hr, button, input, " +
                         "h1, h2, h3, h4, header, footer";
-
 const FLAG_SELECTOR = YELLOW_SELECTOR;
-const FLAG_URL = chrome.extension.getURL("/images/sweden.jpg");
 
-
-$("body").css({
-  "color": BLACK,
-});
+const VECTOR_FLAG = chrome.extension.getURL("/images/SEvektor.svg");
 
 
 $(BLUE_SELECTOR).css({
@@ -42,9 +36,7 @@ $(FLAG_SELECTOR).filter(function() {
           (w * 2) > h &&        // not too tall
           w < (3 * h));         // not too wide
 }).css({
-  "background-image": 'url("' + FLAG_URL + '")',
   "background-size": "100% 100%",
   "background-repeat": "no-repeat",
-  "background-color": "rgba(0, 0, 0, 0.5)",
-  "border": "1px solid " + YELLOW,
+	"background-image": "url(" + VECTOR_FLAG + ")",
 });
