@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "swede-it",
+  "name": "Swede It",
   "description": "Make your favorite webpage a bit more Swedish",
   "version": "1.0",
   "icons": {
