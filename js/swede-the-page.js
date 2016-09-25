@@ -37,7 +37,7 @@ $(FLAG_SELECTOR).filter(function() {
           (w * 2) > h &&        // not too tall
           w < (3 * h));         // not too wide
 }).css({
-	"background-image": "url(" + VECTOR_FLAG + ")",
+  "background-image": "url(" + VECTOR_FLAG + ")",
   "background-size": "100% 100%",
   "background-repeat": "no-repeat",
   "color": BLACK,
